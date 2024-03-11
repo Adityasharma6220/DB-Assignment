@@ -1,0 +1,49 @@
+-- CREATE DATABASE product_database;
+USE product_database;
+-- CREATE TABLE product_category (
+--     id INT PRIMARY KEY,
+--     name VARCHAR(255) NOT NULL,
+--     description TEXT,
+--     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--     modified_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+--     deleted_at TIMESTAMP NULL
+-- );
+-- drop table product;
+-- CREATE TABLE product (
+--     id INT PRIMARY KEY,
+--     name VARCHAR(255) NOT NULL,
+--     product_inventory_id INT,
+--     deleted_at TIMESTAMP,
+--     FOREIGN KEY (product_inventory_id) REFERENCES product_inventory(id)
+-- );
+-- CREATE TABLE product_inventory (
+--     id INT PRIMARY KEY,
+--     SKU VARCHAR(255) NOT NULL,
+--     quantity INT NOT NULL,
+--     category_id INT NOT NULL,
+--     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--     inventory_id INT,
+--     modified_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+--     price DECIMAL(10,2) NOT NULL,
+--     deleted_at TIMESTAMP NUll,
+--     discount_id INT,
+--     discount TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+--     product_id INT NOT NULL,
+--     name VARCHAR(255) NOT NULL,
+--     description TEXT,
+--     discount_percent DECIMAL(10,2) NOT NULL,
+--     active BOOLEAN NOT NULL,
+--     UNIQUE (SKU)
+--     );
+-- CREATE TABLE product_discount (
+--     id INT PRIMARY KEY,
+--     discount_percent DECIMAL(10,2) NOT NULL,
+--     active BOOLEAN NOT NULL,
+--     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--     modified_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+--     deleted_at TIMESTAMP NULL
+-- );
+
+-- Add foreign key constraints
+-- ALTER TABLE product_inventory ADD FOREIGN KEY (category_id) REFERENCES product_category(id);
+-- ALTER TABLE product_inventory ADD FOREIGN KEY (discount_id) REFERENCES product_discount(id);
